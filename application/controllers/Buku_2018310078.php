@@ -37,7 +37,10 @@ class Buku_2018310078 extends RestController {
         ];
         $hasil = $this->model->tambah($data);
         if ($hasil) {
-            $this->response($hasil, 200);
+            $this->response([
+                'status' => 'Berhasil',
+                'message' => $data
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
@@ -54,11 +57,12 @@ class Buku_2018310078 extends RestController {
             'penerbit' => $this->put('penerbit'),
             'tahun_terbit' => $this->put('tahun')
         ];
-        // var_dump($id);echo "<br>";
-        // var_dump($data);
         $hasil = $this->model->ubah($id,$data);
         if ($hasil) {
-            $this->response($hasil, 200);
+            $this->response([
+                'status' => 'Berhasil',
+                'message' => $data
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
@@ -72,8 +76,9 @@ class Buku_2018310078 extends RestController {
         $hasil = $this->model->hapus($id);
         if($hasil){
             $this->response([
-                'status' => 'sukses'
-            ], 201);
+                'status' => 'Berhasil',
+                'message' => 'ID '. $id . ' berhasil dihapus'
+            ], 200);
         }else {
             $this->response([
                 'status' => 'gagal',
