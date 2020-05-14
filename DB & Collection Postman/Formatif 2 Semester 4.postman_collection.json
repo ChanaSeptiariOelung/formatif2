@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "a9119c18-02d3-40f3-81d2-375e1aa42d63",
+		"name": "Formatif 2 Semester 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.2/formatif2/Buku_2018310078",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.2/formatif2/Buku_2018310078",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"2"
+					],
+					"path": [
+						"formatif2",
+						"Buku_2018310078"
+					]
+				},
+				"description": "Read data from database API"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.2/formatif2/Buku_2018310078/tambah",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "id",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kode",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "judul",
+							"value": "987",
+							"type": "text"
+						},
+						{
+							"key": "penulis",
+							"value": "654",
+							"type": "text"
+						},
+						{
+							"key": "penerbit",
+							"value": "321",
+							"type": "text"
+						},
+						{
+							"key": "tahun",
+							"value": "1975",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.2/formatif2/Buku_2018310078/tambah",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"2"
+					],
+					"path": [
+						"formatif2",
+						"Buku_2018310078",
+						"tambah"
+					]
+				},
+				"description": "Insert Data To Database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.2/formatif2/Buku_2018310078/update",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kode",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "judul",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "penulis",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "penerbit",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "tahun",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.2/formatif2/Buku_2018310078/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"2"
+					],
+					"path": [
+						"formatif2",
+						"Buku_2018310078",
+						"update"
+					]
+				},
+				"description": "Update Data From Database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.2/formatif2/Buku_2018310078/hapus",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "kode",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "judul",
+							"value": "1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "penulis",
+							"value": "1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "penerbit",
+							"value": "1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "tahun",
+							"value": "1234",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.2/formatif2/Buku_2018310078/hapus",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"2"
+					],
+					"path": [
+						"formatif2",
+						"Buku_2018310078",
+						"hapus"
+					]
+				},
+				"description": "Delete Data From Database"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "1234",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
