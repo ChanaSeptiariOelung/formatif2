@@ -29,7 +29,7 @@
 							class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('crud_2018310078/tambah')?>"><i
+					<a class="nav-link" href="<?= base_url('Buku_2018310078/tambah')?>"><i
 							class="fas fa-plus-circle"></i> Tambah Buku</a>
 				</li>
 			</ul>
@@ -45,7 +45,7 @@
 					<?php 
 					if($status == "Tambah"){?>
 					<h1 class="text-center"><?= $status ?> Buku</h1>
-					<form action="<?= base_url('Crud_2018310078/proses_tambah'); ?>" method="post">
+					<form action="<?= base_url('Buku_2018310078/p_tambah'); ?>" method="post">
 						<table>
 							<tr>
 								<td>Kode Buku</td>
@@ -78,30 +78,30 @@
 					</form>
 					<?php } else { ?>
 					<h1 class="text-center"><?= $status ?> Buku</h1>
-					<form action="<?= base_url('Crud_2018310078/proses_ubah'); ?>" method="post">
+					<form action="<?= base_url('Buku_2018310078/p_ubah'); ?>" method="post">
 						<table>
 							<tr>
 								<td>Kode Buku</td>
 								<td>
-									<input type="text" disabled value="<?= $hasil[0]['kode_buku'] ?>">
-									<input type="hidden" name="kode" value="<?= $hasil[0]['kode_buku'] ?>">
+									<input type="text" disabled value="<?= $data[0]['kode_buku'] ?>">
+									<input type="hidden" name="kode" value="<?= $data[0]['kode_buku'] ?>">
 								</td>
 							</tr>
 							<tr>
 								<td>Judul Buku</td>
-								<td><input type="text" name="judul" value="<?= $hasil[0]['judul_buku'] ?>"></td>
+								<td><input type="text" name="judul" value="<?= $data[0]['judul'] ?>"></td>
 							</tr>
 							<tr>
 								<td>Penulis Buku</td>
-								<td><input type="text" name="penulis" value="<?= $hasil[0]['penulis'] ?>"></td>
+								<td><input type="text" name="penulis" value="<?= $data[0]['penulis'] ?>"></td>
 							</tr>
 							<tr>
 								<td>Penerbit Buku</td>
-								<td><input type="text" name="penerbit" value="<?= $hasil[0]['penerbit'] ?>"></td>
+								<td><input type="text" name="penerbit" value="<?= $data[0]['penerbit'] ?>"></td>
 							</tr>
 							<tr>
 								<td>Tahun Terbit Buku</td>
-								<td><input type="number" name="tahun" value="<?= $hasil[0]['tahun_terbit'] ?>"></td>
+								<td><input type="number" name="tahun" value="<?= $data[0]['tahun_terbit'] ?>"></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>

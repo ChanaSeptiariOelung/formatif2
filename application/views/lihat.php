@@ -46,28 +46,29 @@
 						<tr>
 							<th class="text-center">Kode Buku</th>
 							<th class="text-center">Judul Buku</th>
-							<th class="text-center">Pengarang Buku</th>
+							<th class="text-center">Penulis Buku</th>
+							<th class="text-center">Penerbit Buku</th>
 							<th class="text-center">Tahun Terbit</th>
 							<th class="text-center">Aksi</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- Ini Pengulangan Data -->
-						<!-- <?php
-            foreach($data as $dt){
-              $kode = $dt['kode_buku'];
-              $ubah = base_url()."Buku_2018310078/ubah/$kode";
-              $hapus = base_url()."Buku_2018310078/hapus/$kode";?>
-
+                        <?php
+                        foreach($data as $dt){
+                            $kode = $dt['kode_buku'];
+                            $ubah = base_url()."Buku_2018310078/edit/$kode";
+                            $hapus = base_url()."Buku_2018310078/hapus/$kode";?>
 						<tr>
 							<td><?=$kode?></td>
-							<td><?=$dt['judul_buku']?></td>
-							<td><?=$dt['pengarang']?></td>
+							<td><?=$dt['judul']?></td>
+							<td><?=$dt['penulis']?></td>
+							<td><?=$dt['penerbit']?></td>
 							<td><?=$dt['tahun_terbit']?></td>
 							<td class="text-center"><a href="<?=$ubah?>"><i class="far fa-edit" title="Edit"></i></a> | <a
 									href="<?=$hapus?>"><i class="fas fa-trash" title="Hapus"></i></a></td>
 						</tr>
-						<?php } ?> -->
+						<?php } ?>
 					</tbody>
 				</table>
 			</div>

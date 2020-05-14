@@ -10,15 +10,18 @@ class Buku_2018310078 extends CI_Controller {
         $this->load->model('Buku_model_2018310078','model');        
     }
     public function index(){
-        $this->load->view('lihat');
+        $content['data'] = $this->model->liat();
+        $this->load->view('lihat',$content);
     }
     public function tambah(){
         $content['status'] = "Tambah";
         $this->load->view('tambah',$content);
     }
     public function edit($id){
+        $cari = array("kode_buku" => $id);
+        $data = $this->model->cari_id($cari);
         $content['status'] = "Edit";
-        $content['data'] = array("kode_buku" => $id);
+        $content['data'] = $data;
         $this->load->view('tambah',$content);
     }
     public function hapus($id){
@@ -28,27 +31,40 @@ class Buku_2018310078 extends CI_Controller {
 
     public function p_tambah(){
         $data = [
-            'kode_buku' => $kode,
-            'judul' => $judul,
-            'penulis' => $pengarang,
-            'penerbit' => $pengarang,
-            'tahun_terbit' => $tahun
+            'kode_buku' => $this->input->post('kode'),
+            'judul' => $this->input->post('judul'),
+            'penulis' => $this->input->post('penulis'),
+            'penerbit' => $this->input->post('penerbit'),
+            'tahun_terbit' => $this->input->post('tahun')
         ];
-        $this->model->tambah($data);
-        redirect(base_url(),'refresh');
+        $hasil = $this->model->tambah($data);
+        if($hasil > 0 ){
+            redirect(base_url(),'refresh');
+        } else {
+            echo '<script language="javascript">';
+            echo 'alert("Data Gagal di Simpan")';
+            echo '</script>';
+        }
+
     }
     public function p_ubah(){
         $id = [
-            'kode_buku' => $kode
+            'kode_buku' => $this->input->post('kode')
         ];
         $data = [
-            'judul' => $judul,
-            'penulis' => $pengarang,
-            'penerbit' => $pengarang,
-            'tahun_terbit' => $tahun
+            'judul' => $this->input->post('judul'),
+            'penulis' => $this->input->post('penulis'),
+            'penerbit' => $this->input->post('penerbit'),
+            'tahun_terbit' => $this->input->post('tahun')
         ];
-        $this->model->ubah($id,$data);
-        redirect(base_url(),'refresh');
+        $hasil = $this->model->ubah($id,$data);
+        if($hasil > 0 ){
+            redirect(base_url(),'refresh');
+        } else {
+            echo '<script language="javascript">';
+            echo 'alert("Data Gagal di Simpan")';
+            echo '</script>';
+        }
     }
 
 }
