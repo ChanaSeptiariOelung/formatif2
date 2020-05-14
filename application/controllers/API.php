@@ -1,6 +1,5 @@
 <?php
 
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 require APPPATH . '/libraries/RestController.php';
@@ -8,7 +7,7 @@ require APPPATH . '/libraries/Format.php';
 
 use chriskacerguis\RestServer\RestController;
 
-class Buku_2018310078 extends CI_Controller {
+class Api extends RestController {
 
     function __construct()
     {
@@ -86,6 +85,4 @@ class Buku_2018310078 extends CI_Controller {
 
 }
 
-
-
-/* End of file Buku_2018310078.php */
+/* End of file Controllername.php */
